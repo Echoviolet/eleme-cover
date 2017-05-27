@@ -13,14 +13,14 @@ import 'common/stylus/index.styl';
 Vue.use(VueRouter);
 Vue.use(VueResource);
 let routes = [
-    {path: '/', name: 'index', component: App, children: [{path: '/goods', component: goods}, {path: '/ratings', component: ratings}, {path: '/seller', component: seller}]}
+  {path: '/', name: 'index', component: App, children: [{path: '/goods', component: goods}, {path: '/ratings', component: ratings}, {path: '/seller', component: seller}]}
 ];
 let router = new VueRouter({
-    'linkActiveClass': 'active',
-    routes // （缩写）相当于 routes: routes
+  'linkActiveClass': 'active',
+   routes // （缩写）相当于 routes: routes
 });
 let app = new Vue({
-    router
+  router
 }).$mount('#app');
-router.push('/goods');
+  router.push('/goods');
 export default app;
